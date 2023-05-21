@@ -2,6 +2,8 @@
 Код работы с тестами
 """
 import customtkinter as ctk
+from collections import OrderedDict
+from random import shuffle
 
 
 class TestingFrame(ctk.CTkFrame):
@@ -15,6 +17,7 @@ class TestingFrame(ctk.CTkFrame):
         self.btn_list = []
         self.current_case_answer = None
         self.test_data = None
+        self.case_data = None
         self.imageParser = None
 
         # Шрифты
@@ -58,13 +61,22 @@ class TestingFrame(ctk.CTkFrame):
         self.case_description = ctk.CTkLabel(master=self.case_frame, text="", font=self.text_font,
                                              wraplength=750, justify="left")
 
+    def shuffle_cases(self):
+        """Перемешивает рандомно кейсы"""
+        keys = list(self.test_data["cases"].keys())
+        shuffle(keys)
+        shuffled = OrderedDict()
+        for key in keys:
+            shuffled[key] = self.test_data["cases"][key]
+        self.case_data = shuffled
+
     def change_case_event(self, direction: str):
         """Перейти на другой кейс"""
         current_move = self.move
         self.save_case_answer(current_move, self.current_case_answer.get())
 
         if direction == "next":
-            if self.move < len(self.test_data["cases"]):
+            if self.move < len(self.case_data):
                 self.move += 1
         if direction == "prev":
             if self.move > 1:
@@ -73,13 +85,13 @@ class TestingFrame(ctk.CTkFrame):
         if current_move != self.move:
             self.draw_case(self.move - 1)
 
-        if self.move == len(self.test_data["cases"]):
+        if self.move == len(self.case_data):
             self.quit_btn.configure(state="normal")
             self.calculate_result()
         else:
             self.quit_btn.configure(state="disabled")
 
-        self.progress.set((self.move - 1) / (len(self.test_data["cases"]) - 1))
+        self.progress.set((self.move - 1) / (len(self.case_data) - 1))
 
     def save_case_answer(self, move, answer):
         """Сохраняет ответы. В случае пустого значения сохраняет None"""
@@ -92,21 +104,21 @@ class TestingFrame(ctk.CTkFrame):
         """Вычислить результат в %"""
         result = 0
         for elem in self.case_answers.items():
-            if elem[1] == list(self.test_data["cases"].items())[elem[0]-1][1]["correct"]:
+            if elem[1] == list(self.case_data.items())[elem[0]-1][1]["correct"]:
                 result += 1
-        return result / len(self.test_data["cases"]) * 100
+        return result / len(self.case_data) * 100
 
     def calculate_completed(self):
         """Вычисляет количество правильных ответов"""
         result = 0
         for elem in self.case_answers.items():
-            if elem[1] == list(self.test_data["cases"].items())[elem[0]-1][1]["correct"]:
+            if elem[1] == list(self.case_data.items())[elem[0]-1][1]["correct"]:
                 result += 1
-        return result, len(self.test_data["cases"])
+        return result, len(self.case_data)
 
     def draw_case(self, n: int):
         """Прорисовать конкретный кейс"""
-        case = list(self.test_data["cases"].items())[n]
+        case = list(self.case_data.items())[n]
         if case[1]["type"] == "only one answer":
             self.draw_only_one_answer_case(case)
         if case[1]["type"] == "multiple answer":
@@ -116,7 +128,7 @@ class TestingFrame(ctk.CTkFrame):
 
     def draw_case_top(self, case):
         """Прорисовать верхнюю часть кейса"""
-        self.case_name.configure(text=case[1]["name"])
+        self.case_name.configure(text=f"Вопрос {self.move}")
 
         self.case_description.configure(text=case[1]["description"])
 

@@ -96,6 +96,7 @@ class App(ctk.CTk):
         self.tests_list.grid_forget()
         self.testing_frame.test_data = self.tests_list.get_test_data()
         self.testing_frame.imageParser = ImageParser(self.tests_list.get_test_data())
+        self.testing_frame.shuffle_cases()
         self.testing_frame.draw_case(0)
         self.testing_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         self.testing_frame.quit_btn.grid(row=2, column=0, padx=10, pady=(0, 5), sticky="nsw")
