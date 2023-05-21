@@ -1,0 +1,127 @@
+{
+  "test_name": "Тест №2 Информатика",
+  "description": "Тест по теме \"Устройство компьютера\". 10 вопросов.",
+  "cases": {
+    "case 1": {
+      "type": "only one answer",
+      "name": "Вопрос 1.",
+      "description": "Для оптического ввода в компьютер и преобразования в компьютерную форму изображений, а также текстовых документов используется:",
+      "image": "",
+      "answers": {
+        "ans1": "Графический планшет",
+        "ans2": "Принтер",
+        "ans3": "Сканер"
+      },
+      "correct": "ans3"
+    },
+    "case 2": {
+      "type": "only one answer",
+      "name": "Вопрос 2.",
+      "description": "Производительность процессора зависит от:",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AMD_Phenom_II_X4_840_%28HDX840WFK42GM%29_CPU-top_oblique_PNr°0373.jpg/220px-AMD_Phenom_II_X4_840_%28HDX840WFK42GM%29_CPU-top_oblique_PNr°0373.jpg",
+      "answers": {
+        "ans1": "Его типа и скорости работы",
+        "ans2": "Его разрядности и тактовой частоты",
+        "ans3": "Его сокета",
+        "ans4": "Его разъёмов"
+      },
+      "correct": "ans2"
+    },
+    "case 3": {
+      "type": "only one answer",
+      "name": "Вопрос 3.",
+      "description": "Информация на оптическом диске хранится:",
+      "image": "",
+      "answers": {
+        "ans1": "На одной спиралевидный дорожке, идущей от центра к периферии",
+        "ans2": "На определённых дорожках",
+        "ans3": "В определённых секторах"
+      },
+      "correct": "ans1"
+    },
+    "case 4": {
+      "type": "only one answer",
+      "name": "Вопрос 4.",
+      "description": "Информация представленная в двоичном компьютерном коде называется:",
+      "image": "",
+      "answers": {
+        "ans1": "Программа",
+        "ans2": "Файл",
+        "ans3": "Данные"
+      },
+      "correct": "ans3"
+    },
+    "case 5": {
+      "type": "only one answer",
+      "name": "Вопрос 5.",
+      "description": "Качество изображения монитора определяется:",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/LG_L194WT-SF_LCD_monitor.jpg/200px-LG_L194WT-SF_LCD_monitor.jpg",
+      "answers": {
+        "ans1": "Типом подключения",
+        "ans2": "Разрешением монитора",
+        "ans3": "Типом видеокарты"
+      },
+      "correct": "ans2"
+    },
+    "case 6": {
+      "type": "only one answer",
+      "name": "Вопрос 6.",
+      "description": "Для того чтобы компьютер смог выполнить обработку данных по программе, программа и данные должны быть загруженны:",
+      "image": "",
+      "answers": {
+        "ans1": "В оперативную память",
+        "ans2": "В постоянную память",
+        "ans3": "В шину"
+      },
+      "correct": "ans1"
+    },
+    "case 7": {
+      "type": "only one answer",
+      "name": "Вопрос 7.",
+      "description": "Пути повышения производительности процессора заключаются в:",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Next_Thing_CHIP_and_PocketCHIP_%2829074999953%29.png/220px-Next_Thing_CHIP_and_PocketCHIP_%2829074999953%29.png",
+      "answers": {
+        "ans1": "В совершенствовании архитектуры, использовании нескольких ядер",
+        "ans2": "В изменении функциональной схемы",
+        "ans3": "В увеличении числа разъемов процессора"
+      },
+      "correct": "ans1"
+    },
+    "case 8": {
+      "type": "only one answer",
+      "name": "Вопрос 8.",
+      "description": "Какие устройства относятся к устройствам ввода информации?",
+      "image": "",
+      "answers": {
+        "ans1": "Принтер, сканер, клавиатура",
+        "ans2": "Графический планшет, клавиатура, микрофон, сканер",
+        "ans3": "Монитор, сканер, клавиатура"
+      },
+      "correct": "ans2"
+    },
+    "case 9": {
+      "type": "only one answer",
+      "name": "Вопрос 9.",
+      "description": "Какие принтеры обеспечивают типографическое качество печати, высокую скорость печати при меньших затратах на расходные материалы?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/HP_LaserJet_4100tn.jpg/220px-HP_LaserJet_4100tn.jpg",
+      "answers": {
+        "ans1": "Струйные",
+        "ans2": "Лазерные",
+        "ans3": "Матричные"
+      },
+      "correct": "ans2"
+    },
+    "case 10": {
+      "type": "only one answer",
+      "name": "Вопрос 10.",
+      "description": "Что хранится в ячейках оперативной памяти?",
+      "image": "",
+      "answers": {
+        "ans1": "Микрочипы",
+        "ans2": "Модули памяти",
+        "ans3": "Двоичный код длиной 8 знаков"
+      },
+      "correct": "ans2"
+    }
+  }
+}
