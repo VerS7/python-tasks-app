@@ -17,10 +17,10 @@ class ImageParser:
     def load_all_images(self):
         """Загружает все изображения в виде PIL.Image из теста в словарь"""
         for case, data in self.test_data["cases"].items():
-            if "image_link" in data.keys():
-                if len(data["image_link"]) > 0:
+            if "image" in data.keys():
+                if len(data["image"]) > 0:
                     try:
-                        image = self.get_image_bytes(data["image_link"])
+                        image = self.get_image_bytes(data["image"])
                         self.byteImages[case] = Image.open(BytesIO(image))
                     except Exception as e:
                         continue
