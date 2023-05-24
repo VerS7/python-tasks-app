@@ -143,9 +143,11 @@ class TestingFrame(ctk.CTkFrame):
 
     def draw_case_answers(self, case, variable):
         """Прорисовать нижнюю часть кейса с ответами"""
+        answers = list(case[1]["answers"].items())
+        shuffle(answers)
         for btn in self.btn_list:
             btn.grid_forget()
-        for i, answer in enumerate(case[1]["answers"].items()):
+        for i, answer in enumerate(answers):
             btn = ctk.CTkRadioButton(master=self.answer_frame, text=answer[1],
                                      font=self.text_font, value=answer[0], variable=variable)
             btn.grid(row=i, column=0, sticky="nsew", padx=15, pady=15)
@@ -156,9 +158,3 @@ class TestingFrame(ctk.CTkFrame):
         self.current_case_answer = ctk.StringVar()
         self.draw_case_top(case)
         self.draw_case_answers(case, self.current_case_answer)
-
-    def draw_multiple_answer_case(self, case):
-        pass
-
-    def draw_text_enter_answer_case(self, case):
-        pass
