@@ -18,7 +18,7 @@
       "type": "only one answer",
       "name": "Вопрос 2.",
       "description": "Производительность процессора зависит от:",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AMD_Phenom_II_X4_840_%28HDX840WFK42GM%29_CPU-top_oblique_PNr°0373.jpg/220px-AMD_Phenom_II_X4_840_%28HDX840WFK42GM%29_CPU-top_oblique_PNr°0373.jpg",
+      "image": "test1_1.jpg",
       "answers": {
         "ans1": "Его типа и скорости работы",
         "ans2": "Его разрядности и тактовой частоты",
@@ -55,7 +55,7 @@
       "type": "only one answer",
       "name": "Вопрос 5.",
       "description": "Качество изображения монитора определяется:",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/LG_L194WT-SF_LCD_monitor.jpg/200px-LG_L194WT-SF_LCD_monitor.jpg",
+      "image": "test1_2.jpg",
       "answers": {
         "ans1": "Типом подключения",
         "ans2": "Разрешением монитора",
@@ -79,7 +79,7 @@
       "type": "only one answer",
       "name": "Вопрос 7.",
       "description": "Пути повышения производительности процессора заключаются в:",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Next_Thing_CHIP_and_PocketCHIP_%2829074999953%29.png/220px-Next_Thing_CHIP_and_PocketCHIP_%2829074999953%29.png",
+      "image": "test1_3.png",
       "answers": {
         "ans1": "В совершенствовании архитектуры, использовании нескольких ядер",
         "ans2": "В изменении функциональной схемы",
@@ -103,7 +103,7 @@
       "type": "only one answer",
       "name": "Вопрос 9.",
       "description": "Какие принтеры обеспечивают типографическое качество печати, высокую скорость печати при меньших затратах на расходные материалы?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/HP_LaserJet_4100tn.jpg/220px-HP_LaserJet_4100tn.jpg",
+      "image": "test1_4.jpg",
       "answers": {
         "ans1": "Струйные",
         "ans2": "Лазерные",
@@ -121,7 +121,7 @@
         "ans2": "Модули памяти",
         "ans3": "Двоичный код длиной 8 знаков"
       },
-      "correct": "ans2"
+      "correct": "ans3"
     }
   }
 }
