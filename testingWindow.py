@@ -122,9 +122,9 @@ class TestingFrame(ctk.CTkFrame):
         if case[1]["type"] == "only one answer":
             self.draw_only_one_answer_case(case)
         if case[1]["type"] == "multiple answer":
-            self.draw_multiple_answer_case(case)
+            pass
         if case[1]["type"] == "text enter answer":
-            self.draw_text_enter_answer_case(case)
+            pass
 
     def draw_case_top(self, case):
         """Прорисовать верхнюю часть кейса"""
